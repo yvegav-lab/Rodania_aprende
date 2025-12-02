@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Buscador de Actividades</title>
+  <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style2.css">
+  <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!fonts fuentes o tipos de letras––«
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;0,900;1,100;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css"> <!--es un estandar para los buscadores  -->
+    <script src="https://kit.fontawesome.com/6851909309.js" crossorigin="anonymous"></script>
+     <!-- herramientas de fuentes e íconos basado en CSS y Less -->
+</head>
+<body>
+  <header>
+        <div class="container"> <!-- contenedor principal -->
+
+          <a href="index.html"> <img src="img/logo_iero.png" class="logo">   </a>
+
+          <nav>
+            <a href="#inicio">Inicio</a>
+              <a href="#Nosotros">Nosotros</a>
+              <a href="#Servicio">Servicios</a>
+              <a href="#Galeria">Galería</a>
+              <a href="#Contactenos">Contáctenos</a> 
+          </nav>
+          <a href="#" class="hamb"><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </header>
+
+  <main>
+<section id="inicio"> 
+              <img src="img/bannerpr.jpg">
+              <div class="bloque_inicio">
+                <h1>Bienvenidos a Rodania Aprende</h1> <!-- h1 titulos -->
+                <p>¿Qué es Rodania Aprende?
+                   simplemente el texto de relleno de las imprentas y archivos de texto. 
+                                </p>
+                                <a href="#Buscador" class="boton boton-rojo">Buscar</a>
+              </div>
+            </section>
+
+
+<section id="Buscador" class="seccion">
+              <div class="container">
+                 <h1>🔍 Buscador de Actividades Educativas</h1>
+
+    <div class="filters">
+      <input type="text" id="search" placeholder="¿Qué quieres Buscar hoy?...">
+      <select id="area">
+        <option value="">Área</option>
+        <option value="Matemáticas">Matemáticas</option>
+        <option value="Lengua Castellana">Lengua Castellana</option>
+      </select>
+      <select id="grado">
+        <option value="">Grado</option>
+        <option value="5°">5°</option>
+        <option value="6°">6°</option>
+        <option value="7°">7°</option>
+      </select>
+      <input type="text" id="aprendizaje" placeholder="Aprendizaje esperado...">
+      <button onclick="descargarActividad(1)">📥 Descargar</button>
+    </div>
+
+    <div id="results" class="grid">
+    </div>
+                
+              </div>
+            </section>
+
+
+            <section id="Nosotros" class="seccion">
+              <div class="container">
+                  <p> desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original.</p>
+                
+              </div>
+            </section>
+
+
+
+            <section id="Servicio" class="seccion">
+
+              <div class="container">
+
+                <div class="row">
+
+                  <div class="columna columna-33">
+
+                    <div class="bloque_servicio">
+                      <!-- aqui tengo imagen y texto en diferetes div -->
+
+                      <div class="bloque-img-servicio cuadrado-perfecto">  
+                        <img src="img/servicio1.jpg">
+                      </div>
+
+                      <div class="bloque-contenido-servicio">
+                        <h3>Servicio 1</h3>
+                        <p>manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos
+                        </p>
+                        <a href="#" class="boton boton-blanco">Ver más</a>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="columna columna-33">
+
+                    <div class="bloque_servicio">
+                      <!-- aqui tengo imagen y texto en diferetes div-->
+
+                      <div class="bloque-img-servicio cuadrado-perfecto ">  
+                        <img src="img/servicio2.jpg">
+                      </div>
+
+                      <div class="bloque-contenido-servicio">
+                        <h3>Servicio 2</h3>
+                        <p>manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos
+                        </p>
+                        <a href="#" class="boton boton-blanco">Ver más</a>
+                      </div>
+
+                    </div>
+                    
+                  </div>
+
+                  <div class="columna columna-33">
+                    <div class="bloque_servicio">
+                      <!-- aqui tengo imagen y texto en diferetes div-->
+
+                      <div class="bloque-img-servicio cuadrado-perfecto">  
+                        <img src="img/servicio3.jpg">
+                      </div>
+
+                      <div class="bloque-contenido-servicio">
+                        <h3>Servicio 3</h3>
+                        <p>manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos
+                        </p>
+                        <a href="#" class="boton boton-blanco">Ver más</a>
+                      </div>
+
+                    </div>
+                    
+                  </div>
+
+                </div>
+              </div>
+            </section>
+            <section id="Galeria">
+              <div class="container-adatable">
+              <div class="row">
+              <div class=" columna-33">
+                <div class="cuadrado-perfecto">
+                  <img src="img/servicio1.jpg">
+                  <h4>Imagen 1</h4>
+                </div>
+              </div>
+              <div class="columna-33">
+                <div class="cuadrado-perfecto">
+                  <img src="img/servicio2.jpg">
+                  <h4>Imagen 2</h4>
+                </div>
+              </div>
+              <div class=" columna-33">
+                <div class="cuadrado-perfecto">
+                  <img src="img/servicio3.jpg">
+                  <h4>Imagen 3</h4>
+                </div>
+              </div>
+              <div class=" columna-33">
+                <div class="cuadrado-perfecto">
+                  <img src="img/servicio4.jpg">
+                  <h4>Imagen 4</h4>
+                </div>
+              </div>
+              <div class="columna-33">
+                <div class="cuadrado-perfecto">
+                  <img src="img/servicio5.jpg">
+                  <h4>Imagen 5</h4>
+                </div>
+              </div>
+              <div class="columna-33">
+                <div class="cuadrado-perfecto">
+                  <img src="img/servicio6.jpg">
+                  <h4>Imagen 6</h4>
+                </div>
+              </div>
+                
+              </div>
+              </div>
+            </section>
+            
+            <section id="Contactenos" class="seccion">
+
+               <iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=calle%2010%20N%C2%B0%2011-27%20Sahagun+(colombia)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"> 
+              </iframe> <!-- mapa de google -->
+              <div class="container-adatable" >
+                <div class="row">
+                  <div class="columna columna-41 empujar-66" >
+                    <form action="" method="post">
+                      <div class="form-block">
+                      <input type="email" name="nombre" class="form-control" placeholder="Nombre">
+                      </div>
+                      <div class="form-block">
+                      <input type="text" name="email" class="form-control" placeholder="email">
+                      </div>
+                      <div class="form-block">
+                        <textarea name="mensaje" placeholder="mensaje"></textarea>
+                      </div>
+                      <div class="form-block bloque-ultimo">
+                      <input type="submit" class="boton boton-negro" value="Enviar">
+                      </div>
+
+
+                    </form>
+                    <div>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+    <!--____________________________-->
+    
+  </main>
+
+
+<footer>
+            <div class="container">
+                <div class="row">
+
+                  <div class="columna columna-25">
+                  <img src="img/logo-blanco.png" class="logo-footer">
+                  <p>anera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos</p>
+                  </div>
+
+                  <div class="columna columna-25">
+                  <h3>
+                    temas relacionados  
+                  </h3>
+                  <ul>
+                    <li> <a href="#">tema 1</a></li>
+                    <li> <a href="#">tema 1</a></li>
+                    <li> <a href="#">tema 1</a></li>
+                  </ul>
+                  </div>
+
+                  <div class="columna columna-25">
+                  <h3>
+                    Datos de contacto 
+                  </h3>
+                  <ul>
+                    <li>leissi68@gmail.com</li>
+                    <li>+5766544532</li>
+                    <li>sahagun carrera 10 11-27 <br>cordoba-colombia  </li>
+                  </ul>
+                  </div>
+
+                  <div class="columna columna-25">
+                     <h3>
+                       Redes sociales
+                    </h3>
+                    <ul class="redes">
+                       <li><a href="#"><i class="fa-brands fa-twitter"></i>  </a></li>
+                       <li><a href="#"><i class="fa-brands fa-facebook"></i>  </a></li>
+                       <li><a href="#"><i class="fa-brands fa-instagram"></i>  </a></li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+              <div class="barra-footer">
+                &copy; Derechos reservados-2023
+              </div>
+
+      </footer>
+          
+
+
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>

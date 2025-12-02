@@ -1,0 +1,361 @@
+*{
+	/*selector general todo */
+	box-sizing:border-box ;/* para que los elemetos no crescan */
+
+
+ }
+ body{
+ 	font-size:16px;/* me permite darle tamaño a las letras */
+ 	color: black;
+ 	font-family: "Poppins", sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+
+
+ }
+p
+  { /*este es un selector por etiqueta */
+   }
+a{ 
+     display:inline-block;/*me perrmite darle un alto y los colocan uno al lado del otro */
+     text-decoration: none;
+
+   }
+ header{ 
+ 	background-color: white; /* color de fondo*/
+ 	padding: 15px 0; /*borde exterior donde esta el logo para que el logo no este pegadoa al borde arr baj lados*/
+    position: fixed;/*posicion fija no se mueve*/
+    top: 0;
+    width:100%; /*muy importante que este al 100% para que el menu no se veo feo*/
+    left: 0;
+    z-index: 2;/*indica el orden de un elemento posicionado se coloca ensima el que tenga mayor valor*/
+
+   }
+header .container{
+	
+  /*display:inline-block; me permite colocar elmento al lado del otro respentando la altura */
+	display:flex; /*los elementos hijos se acomodan en el espacio que tienen a, nav*/
+	justify-content:space-between ; /*acomoda los elementos con ltrabaja en base al eje x*/
+	align-items: center;/*acomoda los elementos con ltrabaja en base al eje y*/
+
+}
+footer{
+	background-color: black;
+	color: white;
+	padding-top:60px;
+}
+footer .barra-footer{
+	background-color: grey;
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer .logo-footer{
+	width: 100%;
+}
+footer  p{
+	color: white;
+	margin-bottom: 30px;
+}
+footer  a{
+	color: white;
+	
+}
+footer .redes{
+	font-size: 30px;
+	display: flex;
+}
+footer  .redes a{
+	margin: 0 7.5px;
+}
+footer  ul{
+	padding-left: 0;
+	list-style: none;/*quita los putos*/
+	margin:0;
+}
+footer  ul li{
+	margin-bottom: 10px;
+}
+
+.boton{
+	text-align:center;
+	text-decoration:none;
+	padding:15px 20px;
+	border: none;
+}
+.boton.boton-rojo{
+	color: white;
+	background-color: #052a62;
+	font-size:20px ;
+	font-weight: bold;/*profundidad puede ser numero*/
+}
+.boton.boton-blanco{
+	color: #052a62;
+	background-color: white;
+	font-size:16px ;
+	font-weight: bold;/*profundidad puede ser numero*/
+	border:1px solid #052a62;
+}
+.boton.boton-negro{
+	color: white;
+	background-color: black;
+	font-size:16px ;
+	font-weight: bold;/*profundidad puede ser numero*/
+
+}
+.seccion{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.cuadrado-perfecto{
+	width:100%;
+	padding-bottom:100%; /*para general un espacio interno el alto*/
+	position: relative;
+}
+.cuadrado-perfecto img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+header .container .logo{
+	width: 150px; /*ancho*/
+
+
+	}
+header .container nav a{
+	color:#052a62;
+	text-decoration: none;/*quita la linea debajo de los enlaces */
+	margin:0 15px ;/*espacio externo al elemento */
+
+	}
+.container {
+  width:1140px;
+  margin:0 auto 0 auto;
+  align-items:center ;
+  padding-right:15px ;/*margen a la derecha */
+  padding-left:15px ;/*margen a la izquierda */
+/*este es un selector por clase o categoria */
+position: relative;
+}
+.container-adatable{
+  width:100%;
+  padding-right:15px ;
+  padding-left:15px ;
+  position: relative;
+
+}
+.row{
+	display:flex;
+	flex-wrap: wrap;/*si una de las columnas no entra al lado que se vaya hacia bajo*/
+	margin-left: -15px;
+
+	}
+.columna{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.columna-25{
+	width: 25%;
+}
+.columna-33{/*todo lo que va en columnas debe ir %*/
+	width: 33.33%;
+}
+.columna-41{
+  width: 41.66%;
+}
+.columna-50{
+  width: 50%;
+}
+.empujar-50{
+ margin-left: 50%;
+
+}
+.empujar-58{
+ margin-left: 58%;
+
+}
+.empujar-66{
+ margin-left: 66.66%;
+
+}
+.empujar-0{
+ margin-left: 0;
+ 
+}
+
+
+
+#inicio {/*selector  section en html son bloques ocupan toda la pantalla especifico id= */
+position:relative ;/*para poder usar  las propiedades top, bottom, left, right, z-index eje z z-index tiene un valor 1 */
+}
+#inicio img {
+	width:100%;
+	display:block ;
+}
+#inicio .bloque_inicio {
+   position:absolute ;/*no ocupa un espacio puede estar sobre otra */
+   top:30% ;
+   left:50%;
+   width:400px;
+   text-align: center;
+   margin-left: -200px; /*solo el margin trabaja num negativo rl padding no */
+
+}
+#inicio .bloque_inicio h1{
+
+	color:white; 
+	font-size:35px ;
+}
+#inicio .bloque_inicio p{
+
+	color:white; 
+}
+#Nosotros{
+	background-image:url(img/latas.jpg);
+	background-size:cover;
+	color: white;
+}
+#Nosotros p{
+	
+	color: white;
+	text-align: center;
+	font-size:16px ;
+	/* margin=0; */
+}
+#Servicio .bloque_servicio{
+	border: 1px solid grey; /* tamaño tipo color */
+}
+#Servicio .bloque_servicio .bloque-img-servicio{
+	border: 1px solid grey; /* tamaño tipo color */
+
+}
+#Servicio .bloque_servicio .bloque-img-servicio img{
+	width: 100%; /*la imagen era muy grande */
+}
+#Servicio .bloque_servicio .bloque-img-servicio .cuadrado-perfecto{
+	padding-bottom: 56.25%;
+}
+#Servicio .bloque_servicio .bloque-contenido-servicio{
+	padding: 15px;
+	
+}
+#Servicio .bloque_servicio .bloque-contenido-servicio h3{
+	 margin-top: 0;
+	 font-size: 25px;
+}
+#Galeria{
+
+}
+#Galeria h4{
+  padding-right: 15px;
+  padding-right: 15px;
+  text-align:center ;
+  position:absolute;
+  top: 40%;
+  font-size: 18px;
+  width: 100%;
+  color: white;
+}
+#Galeria img{
+
+  filter: grayscale(1); /*filtros para las imag a blanco y negro */
+}
+#Galeria .cuadrado-perfecto:hover img{
+
+  filter: grayscale(0); /*se quita el filtro cuando paso mouse */
+}
+#Galeria .cuadrado-perfecto:hover h4{
+
+	display: none; /*se desaparece el texto cuando paso el mouse*/
+}
+#Contactenos {
+	position: relative;/*quiero que ocupe un espacio*/
+}
+#Contactenos iframe{
+	position: absolute;/*NO quiero que ocupe un espacio*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: grayscale(1); /*filtros para las imag a blanco y negro */
+}
+#Contactenos form{
+	padding: 60px;
+	background-color: #052a62;
+}
+#Contactenos form .form-block{
+	margin-bottom: 15px;
+	width: 100%;
+}
+#Contactenos form .form-block .form-control{
+	display:block; 
+	height: 40px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+#Contactenos form .form-block textarea{
+	display:block;
+	height: 100px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+#Contactenos form .form-block .bloque-ultimo{
+	margin-bottom: 0;
+}
+
+/*todas las propiedades que se colocan aqui solo funciona para dispositivo de este ancho 765*/
+@media(max-width:700px)
+{
+   .container
+    {
+    	width: 100%;
+	}
+    header .container nav {
+	position: fixed;
+	background-color: white;
+	height: 100%;
+	width: 100%;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.4s ease;
+	transform: translateX(100%);
+
+	}
+	header .container nav a {
+	 font-size: 30px;
+	 margin: 15px 0;
+	 background-color: #052a62;
+
+	}
+	header .container .hamb {
+	 
+	 display: block;
+	 font-size: 40px;
+	 color: #052a62;
+	}
+	#inicio{
+		height: 100vh;
+	}
+	#inicio img{
+		height:100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+
+
+}
