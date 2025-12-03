@@ -13,12 +13,13 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-// 🔗 Conexión a la base de datos de XAMPP
+// 🔗 Conexión a la base de datos en Railway (NO localhost)
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "rodaniactividades_db"
+  host: process.env.DB_HOST, 
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT
 });
 
 // Verificar conexión
@@ -26,11 +27,11 @@ db.connect(err => {
   if (err) {
     console.error("❌ Error de conexión a MySQL:", err);
   } else {
-    console.log("✅ Conexión a MySQL exitosa.");
+    console.log("✅ Conexión a MySQL exitosa en Railway.");
   }
 });
 
-// 🧠 Endpoint para buscar actividades
+// Endpoint para buscar actividades
 app.get("/api/actividades", (req, res) => {
   const { q = "", area = "", grado = "", aprendizaje = "" } = req.query;
 
@@ -74,7 +75,6 @@ app.get("/api/descargar/:id", (req, res) => {
 
     doc.pipe(stream);
 
-    // Contenido del PDF
     doc.fontSize(20).text("📘 Actividad Educativa", { align: "center" });
     doc.moveDown();
     doc.fontSize(14).text(`Nombre: ${actividad.nombre}`);
@@ -84,21 +84,20 @@ app.get("/api/descargar/:id", (req, res) => {
     doc.text(`Área: ${actividad.area}`);
     doc.text(`Grado: ${actividad.grado}`);
     doc.moveDown();
-    doc.text(`Aprendizaje esperado:`);
+    doc.text("Aprendizaje esperado:");
     doc.font("Helvetica-Oblique").text(actividad.aprendizaje);
     doc.end();
 
-    // Descargar el archivo cuando esté listo
     stream.on("finish", () => {
       res.download(filePath, `actividad-${id}.pdf`, err => {
-        if (!err) fs.unlinkSync(filePath); // Elimina el archivo temporal
+        if (!err) fs.unlinkSync(filePath);
       });
     });
   });
 });
 
-// 🚀 Mostrar rutas registradas (verificación)
-
-// 🚀 Iniciar servidor
-const PORT = 3000;
-app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+// 🚀 Iniciar servidor: puerto dinámico para Railway
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🔥 Servidor corriendo en puerto ${PORT}`);
+});
