@@ -15,12 +15,14 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // 🔗 Conexión a la base de datos en Railway (NO localhost)
 const db = mysql.createConnection({
-  host: process.env.DB_HOST, 
+  host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  port: process.env.DB_PORT
+  port: process.env.DB_PORT,
+  ssl: { rejectUnauthorized: false }   // <-- ESTO ES OBLIGATORIO
 });
+
 
 // Verificar conexión
 db.connect(err => {
